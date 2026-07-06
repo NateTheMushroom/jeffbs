@@ -2,6 +2,8 @@ package net.mshm.jeffbs;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.mshm.jeffbs.datagen.ModBlockLootTableProvider;
+import net.mshm.jeffbs.datagen.ModBlockTagsProvider;
 import net.mshm.jeffbs.datagen.ModModelProvider;
 
 public class JeffSBullDataGenerator implements DataGeneratorEntrypoint {
@@ -10,5 +12,8 @@ public class JeffSBullDataGenerator implements DataGeneratorEntrypoint {
         var pack = fabricDataGenerator.createPack();
 
         pack.addProvider(ModModelProvider::new);
+        pack.addProvider(ModBlockTagsProvider::new);
+        pack.addProvider(ModBlockLootTableProvider::new);
+
 	}
 }
