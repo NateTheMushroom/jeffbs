@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.resources.Identifier;
 
+import net.mshm.jeffbs.block.ModBlocks;
 import net.mshm.jeffbs.creativemodetab.ModCreativeModeTabs;
 import net.mshm.jeffbs.item.ModItems;
 import org.slf4j.Logger;
@@ -18,6 +19,7 @@ public class JeffSBull implements ModInitializer {
         ModCreativeModeTabs.registerModCreativeModeTabs();
 
         ModItems.registerModItems();
+        ModBlocks.registerModBlocks();
 
 	}
 

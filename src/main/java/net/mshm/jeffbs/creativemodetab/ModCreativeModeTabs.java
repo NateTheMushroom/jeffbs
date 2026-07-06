@@ -8,6 +8,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.mshm.jeffbs.JeffSBull;
+import net.mshm.jeffbs.block.ModBlocks;
 import net.mshm.jeffbs.item.ModItems;
 
 public class ModCreativeModeTabs {
@@ -18,6 +19,11 @@ public class ModCreativeModeTabs {
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.NAUGHT_RAW_IRON);
                         output.accept(ModItems.NAUGHT_IRON_INGOT);
+
+                        output.accept(ModBlocks.NAUGHT_IRON_BLOCK);
+                        output.accept(ModBlocks.NAUGHT_RAW_IRON_BLOCK);
+                        output.accept(ModBlocks.NAUGHT_IRON_ORE);
+                        output.accept(ModBlocks.NAUGHT_DEEPSLATE_IRON_ORE);
 
 
                     }).build());
