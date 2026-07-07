@@ -19,6 +19,7 @@ public class ModCreativeModeTabs {
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.NAUGHT_RAW_IRON);
                         output.accept(ModItems.NAUGHT_IRON_INGOT);
+                        output.accept(ModItems.DEBUGGER);
 
                         output.accept(ModBlocks.NAUGHT_IRON_BLOCK);
                         output.accept(ModBlocks.NAUGHT_RAW_IRON_BLOCK);
