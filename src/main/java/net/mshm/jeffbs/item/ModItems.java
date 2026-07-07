@@ -9,6 +9,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.mshm.jeffbs.JeffSBull;
+import net.mshm.jeffbs.food.ModFoods;
 import net.mshm.jeffbs.item.custom.DebuggerItem;
 
 import java.util.function.Function;
@@ -20,6 +21,11 @@ public class ModItems {
 
         //custom items
     public static final Item DEBUGGER = registerItem("debugger", properties -> new DebuggerItem(properties.durability(404)));
+
+    public static  final Item FRIED_EGG = registerItem("fried_egg", properties -> new Item(properties
+            .food(ModFoods.FRIED_EGG, ModFoods.FRIED_EGG_CONSUMABLE).stacksTo(1)));
+
+    public static final Item COLE = registerItem("cole", Item::new);
 
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {

@@ -6,7 +6,12 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.CookingBookCategory;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.SmokingRecipe;
 import net.minecraft.world.level.ItemLike;
 import net.mshm.jeffbs.block.ModBlocks;
 import net.mshm.jeffbs.item.ModItems;
@@ -36,6 +41,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.NAUGHT_IRON_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NAUGHT_IRON_BLOCK);
                 nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.NAUGHT_RAW_IRON, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NAUGHT_RAW_IRON_BLOCK);
+
+
+                List<ItemLike> JEFFS_FOOD_SMELTABLES = List.of(
+                        ModItems.FRIED_EGG
+                );
+
+                SimpleCookingRecipeBuilder.smoking(Ingredient.of(Items.DRAGON_EGG), RecipeCategory.FOOD, ModItems.FRIED_EGG, 0.35f, 100)
+                        .unlockedBy(getHasName(Items.DRAGON_EGG), has(Items.DRAGON_EGG)).save(output, "smoked_fried_egg");
+                SimpleCookingRecipeBuilder.smelting(Ingredient.of(Items.DRAGON_EGG), RecipeCategory.FOOD, CookingBookCategory.FOOD, ModItems.FRIED_EGG, 0.35f, 200)
+                        .unlockedBy(getHasName(Items.DRAGON_EGG), has(Items.DRAGON_EGG)).save(output, "smelted_fried_egg");
 
             }
         };
