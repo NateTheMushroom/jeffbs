@@ -25,6 +25,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.NAUGHT_RAW_IRON_BLOCK);
                         output.accept(ModBlocks.NAUGHT_IRON_ORE);
                         output.accept(ModBlocks.NAUGHT_DEEPSLATE_IRON_ORE);
+                        output.accept(ModBlocks.NAUGHTSQRD);
 
 
                     }).build());

@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.mshm.jeffbs.JeffSBull;
+import net.mshm.jeffbs.block.custom.NaughtsqrdBlock;
 
 import java.util.function.Function;
 
@@ -27,6 +28,11 @@ public class ModBlocks {
     public static final Block NAUGHT_DEEPSLATE_IRON_ORE = registerBlock("naught_deepslate_iron_ore",
             properties -> new Block(properties.strength(3f, 404f)
                     .requiresCorrectToolForDrops().sound(SoundType.MOSS)));
+
+        //custom
+    public static final Block NAUGHTSQRD = registerBlock("naughtsqrd",
+                properties -> new NaughtsqrdBlock(properties.strength(0.1f, 404f)
+                        .sound(SoundType.GLASS)));
 
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {

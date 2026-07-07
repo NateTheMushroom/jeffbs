@@ -1,11 +1,13 @@
 {
   "item.jeffbs.naught_iron_ingot": "Naught Iron Ingot",
   "item.jeffbs.naught_raw_iron": "Naught Raw Iron",
+  "item.jeffbs.debugger": "Debugger",
 
   "block.jeffbs.naught_iron_block": "Naught Iron Block",
   "block.jeffbs.naught_raw_iron_block": "Naught Raw Iron Block",
   "block.jeffbs.naught_iron_ore": "Naught Iron Ore",
   "block.jeffbs.naught_deepslate_iron_ore": "Naught Deepslate Iron Ore",
+  "block.jeffbs.naughtsqrd": "Naught²",
 
 
   "creativemodetab.jeffsbs.jeffs_bs_tab": "Jeff's Bull####"
