@@ -23,6 +23,7 @@ public class ModItems {
 
     public static final Item NAUGHT_IRON_INGOT = registerItem("naught_iron_ingot", Item::new);
     public static final Item NAUGHT_RAW_IRON = registerItem("naught_raw_iron", Item::new);
+    public static final Item FOFERROR = registerItem("404error", Item::new);
 
         //custom items
     public static final Item DEBUGGER = registerItem("debugger", properties -> new DebuggerItem(properties.durability(404)));

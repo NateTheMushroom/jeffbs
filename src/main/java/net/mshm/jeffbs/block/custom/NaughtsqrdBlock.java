@@ -19,6 +19,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.mshm.jeffbs.block.ModBlocks;
 import net.mshm.jeffbs.item.ModItems;
+import net.mshm.jeffbs.tags.ModTags;
 
 import java.util.Map;
 
@@ -60,7 +61,7 @@ public class NaughtsqrdBlock extends Block {
                 itemEntity.setItem(new ItemStack(IRON_MAP.get(itemEntity), itemEntity.getItem().getCount()));
             }*/
             if(isValidItem(itemEntity.getItem())) {
-                itemEntity.setItem(new ItemStack(IRON_MAP.getOrDefault(itemEntity.getItem(), Items.DIAMOND), itemEntity.getItem().getCount()));
+                itemEntity.setItem(new ItemStack(IRON_MAP.getOrDefault(itemEntity.getItem(), ModItems.FOFERROR), itemEntity.getItem().getCount()));
             }
         }
 
@@ -68,7 +69,8 @@ public class NaughtsqrdBlock extends Block {
     }
 
     private boolean isValidItem(ItemStack item) {
-        return item.is(Items.IRON_INGOT) || (item.is(Items.RAW_IRON)) || item.is(Items.IRON_BLOCK) || item.is(Items.RAW_IRON_BLOCK)
-                || item.is(Items.IRON_ORE) || item.is(Items.DEEPSLATE_IRON_ORE);
+        /*return item.is(Items.IRON_INGOT) || (item.is(Items.RAW_IRON)) || item.is(Items.IRON_BLOCK) || item.is(Items.RAW_IRON_BLOCK)
+                || item.is(Items.IRON_ORE) || item.is(Items.DEEPSLATE_IRON_ORE);*/
+        return item.is(ModTags.Items.ERROR_IRON);
     }
 }

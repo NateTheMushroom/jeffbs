@@ -19,6 +19,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createTrivialCube(ModBlocks.NAUGHT_RAW_IRON_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.NAUGHT_IRON_ORE);
         blockModelGenerators.createTrivialCube(ModBlocks.NAUGHT_DEEPSLATE_IRON_ORE);
+        blockModelGenerators.createTrivialCube(ModBlocks.NAUGHTSQRD);
 
     }
 
@@ -28,6 +29,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.NAUGHT_RAW_IRON, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.FRIED_EGG, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.COLE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.FOFERROR, ModelTemplates.FLAT_ITEM);
 
         itemModelGenerators.generateFlatItem(ModItems.DEBUGGER, ModelTemplates.FLAT_HANDHELD_ITEM);
     }
