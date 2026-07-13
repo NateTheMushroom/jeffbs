@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.world.level.block.Blocks;
 import net.mshm.jeffbs.block.ModBlocks;
 import net.mshm.jeffbs.item.ModItems;
 
@@ -15,11 +16,18 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
-        blockModelGenerators.createTrivialCube(ModBlocks.NAUGHT_IRON_BLOCK);
+        //blockModelGenerators.createTrivialCube(ModBlocks.NAUGHT_IRON_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.NAUGHT_RAW_IRON_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.NAUGHT_IRON_ORE);
         blockModelGenerators.createTrivialCube(ModBlocks.NAUGHT_DEEPSLATE_IRON_ORE);
         blockModelGenerators.createTrivialCube(ModBlocks.NAUGHTSQRD);
+
+        blockModelGenerators.family(Blocks.IRON_BLOCK)
+                .stairs(ModBlocks.IRON_STAIRS)
+                .slab(ModBlocks.IRON_SLAB);
+        blockModelGenerators.family(ModBlocks.NAUGHT_IRON_BLOCK)
+                    .stairs(ModBlocks.NAUGHT_IRON_STAIRS)
+                    .slab(ModBlocks.NAUGHT_IRON_SLAB);
 
     }
 

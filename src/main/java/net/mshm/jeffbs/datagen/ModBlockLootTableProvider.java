@@ -32,8 +32,11 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
 
         dropSelf(ModBlocks.NAUGHT_IRON_BLOCK);
         dropSelf(ModBlocks.NAUGHT_RAW_IRON_BLOCK);
-        /*dropWhenSilkTouch(ModBlocks.NAUGHT_DEEPSLATE_IRON_ORE);
-        dropWhenSilkTouch(ModBlocks.NAUGHT_IRON_ORE);*/
+        dropSelf(ModBlocks.NAUGHT_IRON_STAIRS);
+        dropSelf(ModBlocks.IRON_STAIRS);
+
+        add(ModBlocks.NAUGHT_IRON_SLAB, this::createSlabItemTable);
+        add(ModBlocks.IRON_SLAB, this::createSlabItemTable);
 
         add(ModBlocks.NAUGHT_IRON_ORE, createMultiOreDrops(ModBlocks.NAUGHT_IRON_ORE, ModItems.NAUGHT_RAW_IRON, 0, 4));
         add(ModBlocks.NAUGHT_DEEPSLATE_IRON_ORE, createMultiOreDrops(ModBlocks.NAUGHT_DEEPSLATE_IRON_ORE, ModItems.NAUGHT_RAW_IRON, 0, 3));

@@ -29,8 +29,18 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.NAUGHT_IRON_ORE);
                         output.accept(ModBlocks.NAUGHT_DEEPSLATE_IRON_ORE);
                         output.accept(ModBlocks.NAUGHTSQRD);
+                        output.accept(ModBlocks.NAUGHT_IRON_STAIRS);
+                        output.accept(ModBlocks.NAUGHT_IRON_SLAB);
 
 
+                    }).build());
+    public static final CreativeModeTab JEFFS_EXTRA = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
+            Identifier.fromNamespaceAndPath(JeffSBull.MOD_ID, "jeffs_extra"),
+            FabricCreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.IRON_STAIRS))
+                    .title(Component.translatable("creativemodetab.jeffsbs.jeffs_extra"))
+                    .displayItems((parameters, output) -> {
+                        output.accept(ModBlocks.IRON_STAIRS);
+                        output.accept(ModBlocks.IRON_SLAB);
                     }).build());
 
     public static void registerModCreativeModeTabs() {

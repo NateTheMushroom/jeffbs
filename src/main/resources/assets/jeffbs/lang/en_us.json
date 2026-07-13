@@ -11,12 +11,17 @@
   "block.jeffbs.naught_iron_ore": "Naught Iron Ore",
   "block.jeffbs.naught_deepslate_iron_ore": "Naught Deepslate Iron Ore",
   "block.jeffbs.naughtsqrd": "Naught²",
+  "block.jeffbs.iron_stairs": "Iron Stairs",
+  "block.jeffbs.iron_slab": "Iron Slab",
+  "block.jeffbs.naught_iron_stairs": "Naught Iron Stairs",
+  "block.jeffbs.naught_iron_slab": "Naught Iron Slab",
 
 
   "creativemodetab.jeffsbs.jeffs_bs_tab": "Jeff's Bull####",
 
 
-  "tooltip.jeffbs.cole": "Hello, I am cole; however, I am not coal. Do not use me as fuel."
+  "tooltip.jeffbs.cole": "Hello, I am cole; however, I am not coal. Do not use me as fuel.",
+  "creativemodetab.jeffsbs.jeffs_extra": "Jeff's Extra"
 
 
 }

@@ -42,6 +42,22 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.NAUGHT_IRON_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NAUGHT_IRON_BLOCK);
                 nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.NAUGHT_RAW_IRON, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NAUGHT_RAW_IRON_BLOCK);
 
+                stairBuilder(ModBlocks.IRON_STAIRS, Ingredient.of(Items.IRON_INGOT))
+                        .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                        .group("iron")
+                        .save(output);
+                slabBuilder(RecipeCategory.BUILDING_BLOCKS, ModBlocks.IRON_SLAB, Ingredient.of(Items.IRON_INGOT))
+                        .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                        .group("iron")
+                        .save(output);
+                stairBuilder(ModBlocks.NAUGHT_IRON_STAIRS, Ingredient.of(ModItems.NAUGHT_IRON_INGOT))
+                        .unlockedBy(getHasName(ModItems.NAUGHT_IRON_INGOT), has(ModItems.NAUGHT_IRON_INGOT))
+                        .group("iron")
+                        .save(output);
+                slabBuilder(RecipeCategory.BUILDING_BLOCKS, ModBlocks.NAUGHT_IRON_SLAB, Ingredient.of(ModItems.NAUGHT_IRON_INGOT))
+                        .unlockedBy(getHasName(ModItems.NAUGHT_IRON_INGOT), has(ModItems.NAUGHT_IRON_INGOT))
+                        .group("iron")
+                        .save(output);
 
                 List<ItemLike> JEFFS_FOOD_SMELTABLES = List.of(
                         ModItems.FRIED_EGG

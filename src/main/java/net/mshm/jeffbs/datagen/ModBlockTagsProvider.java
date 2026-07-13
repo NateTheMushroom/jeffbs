@@ -20,7 +20,11 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.NAUGHT_IRON_BLOCK)
                 .add(ModBlocks.NAUGHT_RAW_IRON_BLOCK)
                 .add(ModBlocks.NAUGHT_IRON_ORE)
-                .add(ModBlocks.NAUGHT_DEEPSLATE_IRON_ORE);
+                .add(ModBlocks.NAUGHT_DEEPSLATE_IRON_ORE)
+                .add(ModBlocks.IRON_STAIRS)
+                .add(ModBlocks.IRON_SLAB)
+                .add(ModBlocks.NAUGHT_IRON_STAIRS)
+                .add(ModBlocks.NAUGHT_IRON_SLAB);;
 
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.NAUGHT_IRON_BLOCK)
@@ -28,5 +32,12 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.NAUGHT_DEEPSLATE_IRON_ORE);
         valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.NAUGHT_IRON_ORE);
+
+        valueLookupBuilder(BlockTags.STAIRS)
+                .add(ModBlocks.IRON_STAIRS)
+                .add(ModBlocks.NAUGHT_IRON_STAIRS);
+        valueLookupBuilder(BlockTags.SLABS)
+                .add(ModBlocks.IRON_SLAB)
+                .add(ModBlocks.NAUGHT_IRON_SLAB);
     }
 }
