@@ -39,5 +39,9 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         valueLookupBuilder(BlockTags.SLABS)
                 .add(ModBlocks.IRON_SLAB)
                 .add(ModBlocks.NAUGHT_IRON_SLAB);
+        valueLookupBuilder(BlockTags.BUTTONS)
+                .add(ModBlocks.NAUGHT_IRON_BUTTON);
+        valueLookupBuilder(BlockTags.PRESSURE_PLATES)
+                .add(ModBlocks.NAUGHT_IRON_PRESSUREPLATE);
     }
 }

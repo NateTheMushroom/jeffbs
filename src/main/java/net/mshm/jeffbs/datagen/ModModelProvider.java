@@ -26,8 +26,10 @@ public class ModModelProvider extends FabricModelProvider {
                 .stairs(ModBlocks.IRON_STAIRS)
                 .slab(ModBlocks.IRON_SLAB);
         blockModelGenerators.family(ModBlocks.NAUGHT_IRON_BLOCK)
-                    .stairs(ModBlocks.NAUGHT_IRON_STAIRS)
-                    .slab(ModBlocks.NAUGHT_IRON_SLAB);
+                .stairs(ModBlocks.NAUGHT_IRON_STAIRS)
+                .slab(ModBlocks.NAUGHT_IRON_SLAB)
+                .button(ModBlocks.NAUGHT_IRON_BUTTON)
+                .pressurePlate(ModBlocks.NAUGHT_IRON_PRESSUREPLATE);
 
     }
 

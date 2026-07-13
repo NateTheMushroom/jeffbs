@@ -52,12 +52,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .save(output);
                 stairBuilder(ModBlocks.NAUGHT_IRON_STAIRS, Ingredient.of(ModItems.NAUGHT_IRON_INGOT))
                         .unlockedBy(getHasName(ModItems.NAUGHT_IRON_INGOT), has(ModItems.NAUGHT_IRON_INGOT))
-                        .group("iron")
+                        .group("naught_iron")
                         .save(output);
                 slabBuilder(RecipeCategory.BUILDING_BLOCKS, ModBlocks.NAUGHT_IRON_SLAB, Ingredient.of(ModItems.NAUGHT_IRON_INGOT))
                         .unlockedBy(getHasName(ModItems.NAUGHT_IRON_INGOT), has(ModItems.NAUGHT_IRON_INGOT))
-                        .group("iron")
+                        .group("naught_iron")
                         .save(output);
+                buttonBuilder(ModBlocks.NAUGHT_IRON_BUTTON, Ingredient.of(ModItems.NAUGHT_IRON_INGOT))
+                        .unlockedBy(getHasName(ModItems.NAUGHT_IRON_INGOT), has(ModItems.NAUGHT_IRON_INGOT))
+                        .group("naught_iron")
+                        .save(output);
+                pressurePlate(ModBlocks.NAUGHT_IRON_PRESSUREPLATE, ModItems.NAUGHT_IRON_INGOT);
 
                 List<ItemLike> JEFFS_FOOD_SMELTABLES = List.of(
                         ModItems.FRIED_EGG

@@ -9,6 +9,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.mshm.jeffbs.JeffSBull;
@@ -74,6 +75,23 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .strength(5.0F, 6.0F)
                     .sound(SoundType.NETHER_WOOD)));
+    public static final Block NAUGHT_IRON_BUTTON = registerBlock("naught_iron_button",
+            properties -> new ButtonBlock(BlockSetType.IRON, 1, properties
+                    .mapColor(MapColor.COLOR_MAGENTA)
+                    .instrument(NoteBlockInstrument.IRON_XYLOPHONE)
+                    .requiresCorrectToolForDrops()
+                    .strength(5.0F, 6.0F)
+                    .sound(SoundType.WEEPING_VINES)
+                    .noCollision()));
+    public static final Block NAUGHT_IRON_PRESSUREPLATE = registerBlock("naught_iron_pressureplate",
+            properties -> new PressurePlateBlock(BlockSetType.IRON, properties
+                    .mapColor(MapColor.COLOR_MAGENTA)
+                    .instrument(NoteBlockInstrument.IRON_XYLOPHONE)
+                    .requiresCorrectToolForDrops()
+                    .strength(5.0F, 6.0F)
+                    .sound(SoundType.NETHER_WOOD)
+                    .forceSolidOn()
+                    .noCollision()));
 
 
 

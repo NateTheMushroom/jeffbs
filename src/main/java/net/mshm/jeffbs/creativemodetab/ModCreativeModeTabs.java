@@ -31,6 +31,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.NAUGHTSQRD);
                         output.accept(ModBlocks.NAUGHT_IRON_STAIRS);
                         output.accept(ModBlocks.NAUGHT_IRON_SLAB);
+                        output.accept(ModBlocks.NAUGHT_IRON_BUTTON);
+                        output.accept(ModBlocks.NAUGHT_IRON_PRESSUREPLATE);
 
 
                     }).build());
