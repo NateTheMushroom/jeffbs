@@ -33,6 +33,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.NAUGHT_IRON_SLAB);
                         output.accept(ModBlocks.NAUGHT_IRON_BUTTON);
                         output.accept(ModBlocks.NAUGHT_IRON_PRESSUREPLATE);
+                        output.accept(ModBlocks.NAUGHT_IRON_FENCE);
+                        output.accept(ModBlocks.NAUGHT_IRON_FENCE_GATE);
+                        output.accept(ModBlocks.NAUGHT_IRON_WALL);
 
 
                     }).build());
@@ -43,6 +46,9 @@ public class ModCreativeModeTabs {
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.IRON_STAIRS);
                         output.accept(ModBlocks.IRON_SLAB);
+                        output.accept(ModBlocks.IRON_FENCE);
+                        output.accept(ModBlocks.IRON_FENCE_GATE);
+                        output.accept(ModBlocks.IRON_WALL);
                     }).build());
 
     public static void registerModCreativeModeTabs() {

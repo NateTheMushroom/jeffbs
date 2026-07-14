@@ -64,6 +64,27 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .save(output);
                 pressurePlate(ModBlocks.NAUGHT_IRON_PRESSUREPLATE, ModItems.NAUGHT_IRON_INGOT);
 
+                fenceBuilder(ModBlocks.IRON_FENCE, Ingredient.of(Items.IRON_INGOT))
+                        .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                        .group("iron")
+                        .save(output);
+                fenceGateBuilder(ModBlocks.IRON_FENCE_GATE, Ingredient.of(Items.IRON_INGOT))
+                        .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                        .group("iron")
+                        .save(output);
+                wall(RecipeCategory.BUILDING_BLOCKS, ModBlocks.IRON_WALL, Items.IRON_INGOT);
+                fenceBuilder(ModBlocks.NAUGHT_IRON_FENCE, Ingredient.of(ModItems.NAUGHT_IRON_INGOT))
+                        .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                        .group("naught_iron")
+                        .save(output);
+                fenceGateBuilder(ModBlocks.NAUGHT_IRON_FENCE_GATE, Ingredient.of(ModItems.NAUGHT_IRON_INGOT))
+                        .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                        .group("naught_iron")
+                        .save(output);
+                wall(RecipeCategory.BUILDING_BLOCKS, ModBlocks.NAUGHT_IRON_WALL, ModItems.NAUGHT_IRON_INGOT);
+
+
+
                 List<ItemLike> JEFFS_FOOD_SMELTABLES = List.of(
                         ModItems.FRIED_EGG
                 );
