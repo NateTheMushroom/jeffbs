@@ -1,17 +1,17 @@
 package net.mshm.jeffbs.item;
 
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
+import net.minecraft.core.HolderGetter;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.TooltipDisplay;
+import net.minecraft.world.level.block.Block;
 import net.mshm.jeffbs.JeffSBull;
 import net.mshm.jeffbs.food.ModFoods;
 import net.mshm.jeffbs.item.custom.DebuggerItem;
@@ -39,6 +39,51 @@ public class ModItems {
         }
     });
 
+//tools to combine into a multitool when I learn how
+        public static final Item PICKAXE_TOOL_EXE = registerItem("pickaxe_tool_exe", properties ->  new Item(properties
+                .pickaxe(
+                        ModToolMaterials.NAUGHT_IRON,
+                        5.0f,
+                        -2f)){
+        });
+        public static final Item AXE_TOOL_EXE = registerItem("axe_tool_exe", properties ->  new AxeItem(
+                        ModToolMaterials.NAUGHT_IRON,
+                        5.0f,
+                        -2f,
+                        properties){
+        });
+        public static final Item HOE_TOOL_EXE = registerItem("hoe_tool_exe", properties ->  new HoeItem(
+                        ModToolMaterials.NAUGHT_IRON,
+                        5.0f,
+                        -2f,
+                        properties){
+        });
+        public static final Item SHOVEL_TOOL_EXE = registerItem("shovel_tool_exe", properties ->  new ShovelItem(
+                        ModToolMaterials.NAUGHT_IRON,
+                        5.0f,
+                        -2f,
+                        properties){
+        });
+        public static final Item SWORD_TOOL_EXE = registerItem("sword_tool_exe", properties ->  new Item(properties
+                .sword(
+                        ModToolMaterials.NAUGHT_IRON,
+                        5.0f,
+                        -2f)){
+        });
+        public static final Item SPEAR_TOOL_EXE = registerItem("spear_tool_exe", properties ->  new Item(properties
+                .spear(
+                        ModToolMaterials.NAUGHT_IRON,
+                        1.25f,
+                        1.404f,
+                        0.404f,
+                        2f,
+                        8f,
+                        4.04f,
+                        5.1f,
+                        8f,
+                        4.6f)){
+        });
+//above are tools for combining into a multitool somehow
 
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {

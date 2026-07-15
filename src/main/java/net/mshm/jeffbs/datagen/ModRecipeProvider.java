@@ -92,6 +92,61 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .group("naught_iron")
                         .save(output);
 
+                shaped(RecipeCategory.TOOLS, ModItems.PICKAXE_TOOL_EXE)
+                        .pattern("NNN")
+                        .pattern(" / ")
+                        .pattern(" / ")
+                        .define('N', ModItems.NAUGHT_IRON_INGOT)
+                        .define('/', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.NAUGHT_IRON_INGOT), has(ModItems.NAUGHT_IRON_INGOT))
+                        .group("naught_iron")
+                        .save(output);
+                shaped(RecipeCategory.TOOLS, ModItems.AXE_TOOL_EXE)
+                        .pattern("NN")
+                        .pattern("N/")
+                        .pattern(" /")
+                        .define('N', ModItems.NAUGHT_IRON_INGOT)
+                        .define('/', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.NAUGHT_IRON_INGOT), has(ModItems.NAUGHT_IRON_INGOT))
+                        .group("naught_iron")
+                        .save(output);
+                shaped(RecipeCategory.TOOLS, ModItems.HOE_TOOL_EXE)
+                        .pattern("NN")
+                        .pattern(" /")
+                        .pattern(" /")
+                        .define('N', ModItems.NAUGHT_IRON_INGOT)
+                        .define('/', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.NAUGHT_IRON_INGOT), has(ModItems.NAUGHT_IRON_INGOT))
+                        .group("naught_iron")
+                        .save(output);
+                shaped(RecipeCategory.TOOLS, ModItems.SHOVEL_TOOL_EXE)
+                        .pattern("N")
+                        .pattern("/")
+                        .pattern("/")
+                        .define('N', ModItems.NAUGHT_IRON_INGOT)
+                        .define('/', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.NAUGHT_IRON_INGOT), has(ModItems.NAUGHT_IRON_INGOT))
+                        .group("naught_iron")
+                        .save(output);
+                shaped(RecipeCategory.TOOLS, ModItems.SWORD_TOOL_EXE)
+                        .pattern("N")
+                        .pattern("N")
+                        .pattern("/")
+                        .define('N', ModItems.NAUGHT_IRON_INGOT)
+                        .define('/', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.NAUGHT_IRON_INGOT), has(ModItems.NAUGHT_IRON_INGOT))
+                        .group("naught_iron")
+                        .save(output);
+                shaped(RecipeCategory.TOOLS, ModItems.SPEAR_TOOL_EXE)
+                        .pattern("  N")
+                        .pattern(" / ")
+                        .pattern("/  ")
+                        .define('N', ModItems.NAUGHT_IRON_INGOT)
+                        .define('/', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.NAUGHT_IRON_INGOT), has(ModItems.NAUGHT_IRON_INGOT))
+                        .group("naught_iron")
+                        .save(output);
+
 
 
                 List<ItemLike> JEFFS_FOOD_SMELTABLES = List.of(

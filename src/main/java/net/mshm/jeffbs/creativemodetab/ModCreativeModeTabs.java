@@ -24,6 +24,13 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.FRIED_EGG);
                         output.accept(ModItems.COLE);
 
+                        output.accept(ModItems.PICKAXE_TOOL_EXE);
+                        output.accept(ModItems.AXE_TOOL_EXE);
+                        output.accept(ModItems.HOE_TOOL_EXE);
+                        output.accept(ModItems.SHOVEL_TOOL_EXE);
+                        output.accept(ModItems.SWORD_TOOL_EXE);
+                        output.accept(ModItems.SPEAR_TOOL_EXE);
+
                         output.accept(ModBlocks.NAUGHT_IRON_BLOCK);
                         output.accept(ModBlocks.NAUGHT_RAW_IRON_BLOCK);
                         output.accept(ModBlocks.NAUGHT_IRON_ORE);

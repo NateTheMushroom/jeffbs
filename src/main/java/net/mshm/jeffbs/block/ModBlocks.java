@@ -167,7 +167,7 @@ public class ModBlocks {
     //custom
     public static final Block NAUGHTSQRD = registerBlock("naughtsqrd",
                 properties -> new NaughtsqrdBlock(properties.strength(0.1f, 404f)
-                        .sound(SoundType.GLASS)));
+                        .sound(SoundType.GLASS).requiresCorrectToolForDrops()));
 
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
