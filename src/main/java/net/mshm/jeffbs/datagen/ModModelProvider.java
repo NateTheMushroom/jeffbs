@@ -36,6 +36,8 @@ public class ModModelProvider extends FabricModelProvider {
                 .fence(ModBlocks.NAUGHT_IRON_FENCE)
                 .fenceGate(ModBlocks.NAUGHT_IRON_FENCE_GATE)
                 .wall(ModBlocks.NAUGHT_IRON_WALL);
+                blockModelGenerators.createDoor(ModBlocks.NAUGHT_IRON_DOOR);
+                blockModelGenerators.createTrapdoor(ModBlocks.NAUGHT_IRON_TRAPDOOR);
 
     }
 

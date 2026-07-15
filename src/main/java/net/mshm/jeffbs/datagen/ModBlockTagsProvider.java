@@ -30,7 +30,9 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.NAUGHT_IRON_SLAB)
                 .add(ModBlocks.NAUGHT_IRON_FENCE)
                 .add(ModBlocks.NAUGHT_IRON_FENCE_GATE)
-                .add(ModBlocks.NAUGHT_IRON_WALL);
+                .add(ModBlocks.NAUGHT_IRON_WALL)
+                .add(ModBlocks.NAUGHT_IRON_DOOR)
+                .add(ModBlocks.NAUGHT_IRON_TRAPDOOR);
 
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.NAUGHT_IRON_BLOCK)
@@ -49,6 +51,10 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.NAUGHT_IRON_BUTTON);
         valueLookupBuilder(BlockTags.PRESSURE_PLATES)
                 .add(ModBlocks.NAUGHT_IRON_PRESSUREPLATE);
+        valueLookupBuilder(BlockTags.DOORS)
+                .add(ModBlocks.NAUGHT_IRON_DOOR);
+        valueLookupBuilder(BlockTags.TRAPDOORS)
+                .add(ModBlocks.NAUGHT_IRON_TRAPDOOR);
         //fences&walls required
         valueLookupBuilder(BlockTags.FENCES)
                 .add(ModBlocks.IRON_FENCE)

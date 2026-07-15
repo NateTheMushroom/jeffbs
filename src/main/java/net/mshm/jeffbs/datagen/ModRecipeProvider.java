@@ -83,6 +83,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .save(output);
                 wall(RecipeCategory.BUILDING_BLOCKS, ModBlocks.NAUGHT_IRON_WALL, ModItems.NAUGHT_IRON_INGOT);
 
+                doorBuilder(ModBlocks.NAUGHT_IRON_DOOR, Ingredient.of(ModItems.NAUGHT_IRON_INGOT))
+                        .unlockedBy(getHasName(ModItems.NAUGHT_IRON_INGOT), has(ModItems.NAUGHT_IRON_INGOT))
+                        .group("naught_iron")
+                        .save(output);
+                trapdoorBuilder(ModBlocks.NAUGHT_IRON_TRAPDOOR, Ingredient.of(ModItems.NAUGHT_IRON_INGOT))
+                        .unlockedBy(getHasName(ModItems.NAUGHT_IRON_INGOT), has(ModItems.NAUGHT_IRON_INGOT))
+                        .group("naught_iron")
+                        .save(output);
+
 
 
                 List<ItemLike> JEFFS_FOOD_SMELTABLES = List.of(

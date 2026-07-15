@@ -26,14 +26,16 @@ public class ModBlocks {
                     .instrument(NoteBlockInstrument.BIT)
                     .strength(4.5f, 404f)
                     .requiresCorrectToolForDrops()
-                    .sound(SoundType.GRASS)));
+                    .sound(SoundType.GRASS)
+                    .noOcclusion()));
     public static final Block NAUGHT_DEEPSLATE_IRON_ORE = registerBlock("naught_deepslate_iron_ore",
             properties -> new Block(properties
                     .mapColor(MapColor.STONE)
                     .instrument(NoteBlockInstrument.BIT)
                     .strength(3f, 404f)
                     .requiresCorrectToolForDrops()
-                    .sound(SoundType.MOSS)));
+                    .sound(SoundType.MOSS)
+                    .noOcclusion()));
 
     public static final Block IRON_STAIRS = registerBlock("iron_stairs",
             properties -> new StairBlock(Blocks.IRON_BLOCK.defaultBlockState(),properties
@@ -141,6 +143,22 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .strength(4.04F, 4.04F)
                     .sound(SoundType.WOOL)));
+    public static final Block NAUGHT_IRON_DOOR = registerBlock("naught_iron_door",
+            properties -> new DoorBlock(BlockSetType.IRON, properties
+                    .mapColor(MapColor.COLOR_MAGENTA)
+                    .instrument(NoteBlockInstrument.BIT)
+                    .requiresCorrectToolForDrops()
+                    .strength(4.04F, 4.04F)
+                    .sound(SoundType.LODESTONE)
+                    .noOcclusion()));
+    public static final Block NAUGHT_IRON_TRAPDOOR = registerBlock("naught_iron_trapdoor",
+            properties -> new TrapDoorBlock(BlockSetType.IRON, properties
+                    .mapColor(MapColor.COLOR_MAGENTA)
+                    .instrument(NoteBlockInstrument.BIT)
+                    .requiresCorrectToolForDrops()
+                    .strength(4.04F, 4.04F)
+                    .sound(SoundType.GILDED_BLACKSTONE)
+                    .noOcclusion()));
 
 
 

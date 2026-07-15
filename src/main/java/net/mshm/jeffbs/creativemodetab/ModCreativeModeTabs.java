@@ -36,6 +36,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.NAUGHT_IRON_FENCE);
                         output.accept(ModBlocks.NAUGHT_IRON_FENCE_GATE);
                         output.accept(ModBlocks.NAUGHT_IRON_WALL);
+                        output.accept(ModBlocks.NAUGHT_IRON_DOOR);
+                        output.accept(ModBlocks.NAUGHT_IRON_TRAPDOOR);
 
 
                     }).build());
