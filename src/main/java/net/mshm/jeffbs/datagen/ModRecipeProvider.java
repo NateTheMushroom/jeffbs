@@ -157,7 +157,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('X', ModItems.FOFERROR)
                         .define('W', ItemTags.WOOL)
                         .unlockedBy(getHasName(ModItems.NAUGHT_IRON_INGOT), has(ModItems.NAUGHT_IRON_INGOT))
-                        .group("naught_iron")
+                        .group("jeans")
                         .save(output);
 
 

@@ -63,5 +63,7 @@ public class ModModelProvider extends FabricModelProvider {
                 ModArmourMaterials.DENIM_KEY,
                 ItemModelGenerators.TRIM_PREFIX_LEGGINGS,
                 false);
+
+        itemModelGenerators.generateFlatItem(ModItems.HORSE_JEANS, ModelTemplates.FLAT_ITEM);
     }
 }

@@ -14,6 +14,7 @@
   "item.jeffbs.spear_tool_exe": "Spear.exe",
 
   "item.jeffbs.jeans": "Jeans",
+  "item.jeffbs.horse_jeans": "Horse Jeans",
 
   "block.jeffbs.naught_iron_ore": "Naught Iron Ore",
   "block.jeffbs.naught_deepslate_iron_ore": "Naught Deepslate Iron Ore",
@@ -41,5 +42,6 @@
 
   "creativemodetab.jeffsbs.jeffs_extra": "Jeff's Extra",
   "tooltip.jeffbs.cole": "Hello, I am cole; however, I am not coal. Do not use me as fuel.",
-  "tooltip.jeffbs.jeans": "Jeff wanted to look cool. Jeff bought these jeans from Costco."
+  "tooltip.jeffbs.jeans": "Jeff wanted to look cool. Jeff bought these jeans from Costco.",
+  "tooltip.jeffbs.horse_jeans": "Jeff wanted a matching horse. Yea, idk man..."
 }

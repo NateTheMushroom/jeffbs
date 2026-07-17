@@ -20,7 +20,7 @@ public class ModArmourMaterials {
 
     public static final ArmorMaterial DENIM_ARMOUR_MATERIAL = new ArmorMaterial(
             30,
-            ArmorMaterials.makeDefense(0, 5, 7, 0, 0),
+            ArmorMaterials.makeDefense(0, 5, 7, 0, 9),
             20, SoundEvents.ARMOR_UNEQUIP_NAUTILUS,
             8.0f, 0.0f,
            //^^^^^^^^^^^^^takes less damage than netherite leggings at 25 damage and onward when paired with netherite boots, chest, & helm

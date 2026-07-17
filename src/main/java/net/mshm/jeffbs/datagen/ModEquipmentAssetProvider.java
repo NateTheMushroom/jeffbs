@@ -26,6 +26,8 @@ public class ModEquipmentAssetProvider implements DataProvider {
         consumer.accept(ModArmourMaterials.DENIM_KEY,
                 EquipmentClientInfo.builder()
                         .addHumanoidLayers(Identifier.fromNamespaceAndPath(JeffSBull.MOD_ID, "denim"))
+                        .addLayers(EquipmentClientInfo.LayerType.HORSE_BODY,
+                                new EquipmentClientInfo.Layer(Identifier.fromNamespaceAndPath(JeffSBull.MOD_ID, "denim")))
                         .build());
     }
 

@@ -98,6 +98,15 @@ public class ModItems {
             super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
         }
     });
+    public static final Item HORSE_JEANS = registerItem("horse_jeans", properties ->  new Item(properties
+            .horseArmor(
+                    ModArmourMaterials.DENIM_ARMOUR_MATERIAL)){
+        @Override
+        public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+            builder.accept(Component.translatable("tooltip.jeffbs.horse_jeans"));
+            super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+        }
+    });
 
 
 

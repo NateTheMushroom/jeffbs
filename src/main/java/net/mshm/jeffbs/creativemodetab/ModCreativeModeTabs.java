@@ -30,7 +30,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SHOVEL_TOOL_EXE);
                         output.accept(ModItems.SWORD_TOOL_EXE);
                         output.accept(ModItems.SPEAR_TOOL_EXE);
+
                         output.accept(ModItems.JEANS);
+                        output.accept(ModItems.HORSE_JEANS);
 
                         output.accept(ModBlocks.NAUGHT_IRON_BLOCK);
                         output.accept(ModBlocks.NAUGHT_RAW_IRON_BLOCK);
