@@ -7,6 +7,7 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.CookingBookCategory;
@@ -143,6 +144,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("/  ")
                         .define('N', ModItems.NAUGHT_IRON_INGOT)
                         .define('/', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.NAUGHT_IRON_INGOT), has(ModItems.NAUGHT_IRON_INGOT))
+                        .group("naught_iron")
+                        .save(output);
+
+
+                shaped(RecipeCategory.TOOLS, ModItems.JEANS)
+                        .pattern("XNX")
+                        .pattern("W W")
+                        .pattern("X X")
+                        .define('N', ModItems.NAUGHT_IRON_INGOT)
+                        .define('X', ModItems.FOFERROR)
+                        .define('W', ItemTags.WOOL)
                         .unlockedBy(getHasName(ModItems.NAUGHT_IRON_INGOT), has(ModItems.NAUGHT_IRON_INGOT))
                         .group("naught_iron")
                         .save(output);

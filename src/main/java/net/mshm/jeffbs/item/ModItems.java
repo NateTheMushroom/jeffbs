@@ -11,6 +11,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.TooltipDisplay;
+import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.level.block.Block;
 import net.mshm.jeffbs.JeffSBull;
 import net.mshm.jeffbs.food.ModFoods;
@@ -84,6 +85,20 @@ public class ModItems {
                         4.6f)){
         });
 //above are tools for combining into a multitool somehow
+
+
+
+    public static final Item JEANS = registerItem("jeans", properties ->  new Item(properties
+            .humanoidArmor(
+                    ModArmourMaterials.DENIM_ARMOUR_MATERIAL,
+                    ArmorType.LEGGINGS)){
+        @Override
+        public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+            builder.accept(Component.translatable("tooltip.jeffbs.jeans"));
+            super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+        }
+    });
+
 
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {

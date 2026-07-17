@@ -7,6 +7,7 @@ import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.world.level.block.Blocks;
 import net.mshm.jeffbs.block.ModBlocks;
+import net.mshm.jeffbs.item.ModArmourMaterials;
 import net.mshm.jeffbs.item.ModItems;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -57,5 +58,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.SHOVEL_TOOL_EXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.SWORD_TOOL_EXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateSpear(ModItems.SPEAR_TOOL_EXE);
+
+        itemModelGenerators.generateTrimmableItem(ModItems.JEANS,
+                ModArmourMaterials.DENIM_KEY,
+                ItemModelGenerators.TRIM_PREFIX_LEGGINGS,
+                false);
     }
 }
