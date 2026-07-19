@@ -43,5 +43,9 @@
   "creativemodetab.jeffsbs.jeffs_extra": "Jeff's Extra",
   "tooltip.jeffbs.cole": "Hello, I am cole; however, I am not coal. Do not use me as fuel.",
   "tooltip.jeffbs.jeans": "Jeff wanted to look cool. Jeff bought these jeans from Costco.",
-  "tooltip.jeffbs.horse_jeans": "Jeff wanted a matching horse. Yea, idk man..."
+  "tooltip.jeffbs.horse_jeans": "Jeff wanted a matching horse. Yea, idk man...",
+  "tooltip.jeffbs.debugger.a": "§l§nConverts§r §4§kBugged§r§l §nIron Blocks to Iron Blocks",
+  "tooltip.jeffbs.debugger.shift_down": "§oDebugged @ coords: ",
+  "tooltip.jeffbs.debugger.shift_up": "§oPress §e§o§lShift§r§o for coords",
+  "tooltip.jeffbs.debugger.b": "§oClick a §4§o§kbugged§r§o block to save coords"
 }

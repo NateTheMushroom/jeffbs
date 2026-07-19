@@ -6,6 +6,7 @@ import net.minecraft.resources.Identifier;
 
 import net.mshm.jeffbs.block.ModBlocks;
 import net.mshm.jeffbs.creativemodetab.ModCreativeModeTabs;
+import net.mshm.jeffbs.data.ModDataComponents;
 import net.mshm.jeffbs.item.ModItems;
 import net.mshm.jeffbs.registries.ModFuels;
 import org.slf4j.Logger;
@@ -22,6 +23,7 @@ public class JeffSBull implements ModInitializer {
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
         ModFuels.registerFuels();
+        ModDataComponents.registerDataComponents();
 
 	}
 
