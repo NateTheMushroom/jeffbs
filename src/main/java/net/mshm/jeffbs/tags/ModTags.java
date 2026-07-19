@@ -23,6 +23,8 @@ public class ModTags {
 
         public static final TagKey<Item> NAUGHT_IRON_REPAIR = createTag("naught_iron_repair");
 
+      public static final TagKey<Item> CATAPULTABLE = createTag("catapultable");
+
         private static TagKey<Item> createTag(String name) {
             return TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(JeffSBull.MOD_ID, name));
         }

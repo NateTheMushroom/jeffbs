@@ -124,6 +124,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.SWORD_TOOL_EXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateSpear(ModItems.SPEAR_TOOL_EXE);
 
+        itemModelGenerators.createFlatItemModel(ModItems.CATAPULT, ModelTemplates.BOW);
+        itemModelGenerators.generateBow(ModItems.CATAPULT);
+
         itemModelGenerators.generateTrimmableItem(ModItems.JEANS,
                 ModArmourMaterials.DENIM_KEY,
                 ItemModelGenerators.TRIM_PREFIX_LEGGINGS,

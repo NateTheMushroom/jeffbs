@@ -1,24 +1,24 @@
 package net.mshm.jeffbs.item;
 
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
-import net.minecraft.core.HolderGetter;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.equipment.ArmorType;
-import net.minecraft.world.level.block.Block;
 import net.mshm.jeffbs.JeffSBull;
 import net.mshm.jeffbs.food.ModFoods;
 import net.mshm.jeffbs.item.custom.DebuggerItem;
+import net.mshm.jeffbs.tags.ModTags;
+import org.jetbrains.annotations.Contract;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class ModItems {
 
@@ -107,6 +107,34 @@ public class ModItems {
             super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
         }
     });
+
+    public static final Item CATAPULT = registerItem("catapult", properties ->  new BowItem(properties
+            .durability(1280)
+            .enchantable(2)){
+        @Override
+        public Predicate<ItemStack> getAllSupportedProjectiles() {
+            return stack -> stack.is(ModTags.Items.CATAPULTABLE);
+        }
+        @Override
+        public int getDefaultProjectileRange() {
+            return 30;
+        }
+        @Contract
+        public static float getPowerForTime(int timeHeld) {
+            float pow = timeHeld / 35.0F;
+            pow = (pow * pow + pow * 2.0F) / 3.0F;
+            if (pow > 1.0F) {
+                pow = 1.0F;
+            }
+
+            return pow;
+        }
+    });
+
+
+
+
+
 
 
 
