@@ -16,6 +16,8 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.mshm.jeffbs.block.ModBlocks;
 import net.mshm.jeffbs.item.ModItems;
@@ -36,16 +38,30 @@ public class NaughtsqrdBlock extends Block {
 
     public NaughtsqrdBlock(Properties properties) {
         super(properties);
+        registerDefaultState(this.defaultBlockState().setValue(CLICKED, false));
     }
 
+
+    public static final BooleanProperty CLICKED = BooleanProperty.create("clicked");
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         level.addParticle(ParticleTypes.GLOW, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, 0, 1, 0);
 
         level.playLocalSound(pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5,
                 SoundEvents.GLASS_BREAK, SoundSource.MASTER, 40.4f, 4.04f, false);
+        level.setBlockAndUpdate(pos, state.cycle(CLICKED));
         return InteractionResult.SUCCESS;
     }
+
+
+
+    @Override
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(CLICKED);
+    }
+
+
+
 
     @Override
     public void stepOn(Level level, BlockPos pos, BlockState onState, Entity entity) {
