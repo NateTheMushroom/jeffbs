@@ -31,10 +31,17 @@ public class ModItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
         valueLookupBuilder(ItemTags.SHOVELS)
                 .add(ModItems.SHOVEL_TOOL_EXE);
         valueLookupBuilder(ItemTags.SWORDS)
-                .add(ModItems.SWORD_TOOL_EXE);
+                .add(
+                        ModItems.SWORD_TOOL_EXE,
+                        ModItems.STEFF_OF_JAFF
+                );
         valueLookupBuilder(ItemTags.SPEARS)
-                .add(ModItems.SPEAR_TOOL_EXE);
-        valueLookupBuilder(ItemTags.BOW_ENCHANTABLE).add(ModItems.CATAPULT);
+                .add(
+                        ModItems.SPEAR_TOOL_EXE,
+                        ModItems.STEFF_OF_JAFF
+                );
+        valueLookupBuilder(ItemTags.BOW_ENCHANTABLE)
+                .add(ModItems.CATAPULT);
 
         valueLookupBuilder(ItemTags.LEG_ARMOR)
                 .add(ModItems.JEANS);

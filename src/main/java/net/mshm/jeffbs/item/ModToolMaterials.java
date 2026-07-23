@@ -6,4 +6,6 @@ import net.mshm.jeffbs.tags.ModTags;
 public class ModToolMaterials {
     public static final ToolMaterial NAUGHT_IRON = new ToolMaterial(ModTags.Blocks.INCORRECT_FOR_NAUGHT_IRON_TOOL,
             404, 10f, 4f, 1, ModTags.Items.NAUGHT_IRON_REPAIR);
+    public static final ToolMaterial JEFF_LIKE = new ToolMaterial(ModTags.Blocks.INCORRECT_FOR_JEFF_LIKE_TOOL,
+            999, 6f, 6f, 4, ModTags.Items.JEFF_LIKE_REPAIR);
 }

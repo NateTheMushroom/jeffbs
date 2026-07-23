@@ -102,18 +102,26 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         //custopm tool stuff
         valueLookupBuilder(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL)
                 .add(
-                        ModBlocks.NAUGHTSQRD,
-                        Blocks.BEDROCK
+                        ModBlocks.NAUGHTSQRD
                 );
         valueLookupBuilder(ModTags.Blocks.INCORRECT_FOR_NAUGHT_IRON_TOOL)
-                /*.add(blablabla)*/;
-        valueLookupBuilder(BlockTags.INCORRECT_FOR_NETHERITE_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL);
-        valueLookupBuilder(BlockTags.INCORRECT_FOR_DIAMOND_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL);
-        valueLookupBuilder(BlockTags.INCORRECT_FOR_IRON_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL);
-        valueLookupBuilder(BlockTags.INCORRECT_FOR_COPPER_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL);
-        valueLookupBuilder(BlockTags.INCORRECT_FOR_STONE_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL);
-        valueLookupBuilder(BlockTags.INCORRECT_FOR_GOLD_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL);
-        valueLookupBuilder(BlockTags.INCORRECT_FOR_WOODEN_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL);
+                .addTag(ModTags.Blocks.NEEDS_JEFF_LIKE_TOOL)
+                .add(
+                );
+        valueLookupBuilder(ModTags.Blocks.NEEDS_JEFF_LIKE_TOOL)
+                .add(
+                        Blocks.BEDROCK
+                );
+        valueLookupBuilder(ModTags.Blocks.INCORRECT_FOR_JEFF_LIKE_TOOL)
+                .add(
+                );
+        valueLookupBuilder(BlockTags.INCORRECT_FOR_NETHERITE_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL).addTag(ModTags.Blocks.NEEDS_JEFF_LIKE_TOOL);
+        valueLookupBuilder(BlockTags.INCORRECT_FOR_DIAMOND_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL).addTag(ModTags.Blocks.NEEDS_JEFF_LIKE_TOOL);
+        valueLookupBuilder(BlockTags.INCORRECT_FOR_IRON_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL).addTag(ModTags.Blocks.NEEDS_JEFF_LIKE_TOOL);
+        valueLookupBuilder(BlockTags.INCORRECT_FOR_COPPER_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL).addTag(ModTags.Blocks.NEEDS_JEFF_LIKE_TOOL);
+        valueLookupBuilder(BlockTags.INCORRECT_FOR_STONE_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL).addTag(ModTags.Blocks.NEEDS_JEFF_LIKE_TOOL);
+        valueLookupBuilder(BlockTags.INCORRECT_FOR_GOLD_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL).addTag(ModTags.Blocks.NEEDS_JEFF_LIKE_TOOL);
+        valueLookupBuilder(BlockTags.INCORRECT_FOR_WOODEN_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL).addTag(ModTags.Blocks.NEEDS_JEFF_LIKE_TOOL);
 
 
 

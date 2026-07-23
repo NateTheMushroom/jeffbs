@@ -133,5 +133,9 @@ public class ModModelProvider extends FabricModelProvider {
                 false);
 
         itemModelGenerators.generateFlatItem(ModItems.HORSE_JEANS, ModelTemplates.FLAT_ITEM);
+
+
+
+        itemModelGenerators.declareCustomModelItem(ModItems.STEFF_OF_JAFF);
     }
 }

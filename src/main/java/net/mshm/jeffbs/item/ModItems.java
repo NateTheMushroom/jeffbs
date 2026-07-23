@@ -131,6 +131,26 @@ public class ModItems {
         }
     });
 
+    public static final Item STEFF_OF_JAFF = registerItem("steff_of_jaff", properties ->  new Item(properties
+            .spear(
+                    ModToolMaterials.JEFF_LIKE,
+                    0.4f,
+                    1.5f,
+                    0.8f,
+                    5f,
+                    4f,
+                    9.5f,
+                    4f,
+                    7f,
+                    1f
+            ).sword(
+                    ModToolMaterials.JEFF_LIKE,
+                    7.0f,
+                    -3.5f
+            )
+    ){
+    });
+
 
 
 
