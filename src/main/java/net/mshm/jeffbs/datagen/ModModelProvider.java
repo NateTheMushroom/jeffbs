@@ -79,6 +79,10 @@ public class ModModelProvider extends FabricModelProvider {
                 blockModelGenerators.createDoor(ModBlocks.NAUGHT_IRON_DOOR);
                 blockModelGenerators.createTrapdoor(ModBlocks.NAUGHT_IRON_TRAPDOOR);
 
+
+
+                blockModelGenerators.createNonTemplateModelBlock(ModBlocks.EAT_N_SPIT);
+
     }
 
     @Override

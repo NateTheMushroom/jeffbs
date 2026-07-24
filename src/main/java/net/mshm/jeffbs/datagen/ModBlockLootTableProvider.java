@@ -44,6 +44,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(ModBlocks.NAUGHT_IRON_WALL);
         dropSelf(ModBlocks.NAUGHT_IRON_TRAPDOOR);
         dropSelf(ModBlocks.NAUGHTSQRD);
+        dropSelf(ModBlocks.EAT_N_SPIT);
 
         add(ModBlocks.IRON_SLAB, this::createSlabItemTable);
         add(ModBlocks.NAUGHT_IRON_SLAB, this::createSlabItemTable);

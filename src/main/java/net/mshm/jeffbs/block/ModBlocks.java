@@ -14,6 +14,7 @@ import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.mshm.jeffbs.JeffSBull;
+import net.mshm.jeffbs.block.custom.EatNSpitBlock;
 import net.mshm.jeffbs.block.custom.NaughtsqrdBlock;
 
 import java.util.function.Function;
@@ -168,6 +169,9 @@ public class ModBlocks {
     public static final Block NAUGHTSQRD = registerBlock("naughtsqrd",
                 properties -> new NaughtsqrdBlock(properties.strength(0.1f, 404f)
                         .sound(SoundType.GLASS).requiresCorrectToolForDrops().lightLevel(state -> state.getValue(NaughtsqrdBlock.CLICKED) ? 15:0)));
+    public static final Block EAT_N_SPIT = registerBlock("eat_n_spit",
+                properties -> new EatNSpitBlock(properties.strength(0.1f, 404f)
+                        .sound(SoundType.GLASS).requiresCorrectToolForDrops()));
 
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {

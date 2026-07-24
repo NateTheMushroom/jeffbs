@@ -41,6 +41,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.NAUGHT_IRON_ORE);
                         output.accept(ModBlocks.NAUGHT_DEEPSLATE_IRON_ORE);
                         output.accept(ModBlocks.NAUGHTSQRD);
+                        output.accept(ModBlocks.EAT_N_SPIT);
                         output.accept(ModBlocks.NAUGHT_IRON_STAIRS);
                         output.accept(ModBlocks.NAUGHT_IRON_SLAB);
                         output.accept(ModBlocks.NAUGHT_IRON_BUTTON);

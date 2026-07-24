@@ -37,14 +37,16 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                         ModBlocks.NAUGHT_IRON_DOOR,
                         ModBlocks.NAUGHT_IRON_TRAPDOOR
                 ).add(
-                        ModBlocks.NAUGHTSQRD
+                        ModBlocks.NAUGHTSQRD,
+                        ModBlocks.EAT_N_SPIT
                 );
 
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(
                         ModBlocks.NAUGHT_IRON_BLOCK,
                         ModBlocks.NAUGHT_RAW_IRON_BLOCK,
-                        ModBlocks.NAUGHT_DEEPSLATE_IRON_ORE
+                        ModBlocks.NAUGHT_DEEPSLATE_IRON_ORE,
+                        ModBlocks.EAT_N_SPIT
                 );
         valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(
