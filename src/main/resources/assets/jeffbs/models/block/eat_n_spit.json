@@ -6,7 +6,7 @@
 		"0": "jeffbs:block/eat_n_spit_base_3d",
 		"1": "jeffbs:block/eat_n_spit_top_3d",
 		"2": "jeffbs:block/eat_n_spit_innerds_3d",
-		"particle": "eat_n_spit_base_3d"
+		"particle": "jeffbs:block/eat_n_spit_base_3d"
 	},
 	"elements": [
 		{

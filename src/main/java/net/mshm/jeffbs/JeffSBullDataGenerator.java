@@ -2,6 +2,8 @@ package net.mshm.jeffbs;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.minecraft.core.RegistrySetBuilder;
+import net.minecraft.core.registries.Registries;
 import net.mshm.jeffbs.datagen.*;
 
 public class JeffSBullDataGenerator implements DataGeneratorEntrypoint {
@@ -15,6 +17,13 @@ public class JeffSBullDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(ModRecipeProvider::new);
         pack.addProvider(ModItemTagsProvider::new);
         pack.addProvider(ModEquipmentAssetProvider::new);
+        pack.addProvider(ModRegistryDataProvider::new);
+        pack.addProvider(ModPaintingTagsProvider::new);
 
 	}
+
+    @Override
+    public void buildRegistry(RegistrySetBuilder registryBuilder) {
+        registryBuilder.add(Registries.PAINTING_VARIANT, ModPaintings::bootstrap);
+    }
 }

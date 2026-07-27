@@ -18,6 +18,7 @@
   "item.jeffbs.jeans": "Jeans",
   "item.jeffbs.horse_jeans": "Horse Jeans",
 
+
   "block.jeffbs.naught_iron_ore": "Naught Iron Ore",
   "block.jeffbs.naught_deepslate_iron_ore": "Naught Deepslate Iron Ore",
   "block.jeffbs.naughtsqrd": "Naught²",
@@ -38,6 +39,10 @@
   "block.jeffbs.naught_iron_wall": "Naught Iron Wall",
   "block.jeffbs.naught_iron_door": "Naught Iron Door",
   "block.jeffbs.naught_iron_trapdoor": "Naught Iron Trapdoor",
+
+  "painting.jeffbs.the_key.title": "The Key",
+  "painting.jeffbs.the_key.author": "cole G. Feull",
+
 
 
   "creativemodetab.jeffsbs.jeffs_bs_tab": "Jeff's Bull####",
