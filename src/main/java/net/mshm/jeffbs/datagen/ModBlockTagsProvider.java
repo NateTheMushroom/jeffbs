@@ -3,6 +3,8 @@ package net.mshm.jeffbs.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.references.BlockIds;
+import net.minecraft.references.BlockItemIds;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Blocks;
 import net.mshm.jeffbs.block.ModBlocks;
@@ -17,113 +19,115 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        valueLookupBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+        tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(
-                        ModBlocks.IRON_STAIRS,
-                        ModBlocks.IRON_SLAB,
-                        ModBlocks.IRON_FENCE,
-                        ModBlocks.IRON_FENCE_GATE,
-                        ModBlocks.IRON_WALL
+                        ModBlocks.getRK(ModBlocks.IRON_STAIRS),
+                        ModBlocks.getRK(ModBlocks.IRON_SLAB),
+                        ModBlocks.getRK(ModBlocks.IRON_FENCE),
+                        ModBlocks.getRK(ModBlocks.IRON_FENCE_GATE),
+                        ModBlocks.getRK(ModBlocks.IRON_WALL)
                 ).add(
-                        ModBlocks.NAUGHT_IRON_BLOCK,
-                        ModBlocks.NAUGHT_RAW_IRON_BLOCK,
-                        ModBlocks.NAUGHT_IRON_ORE,
-                        ModBlocks.NAUGHT_DEEPSLATE_IRON_ORE,
-                        ModBlocks.NAUGHT_IRON_STAIRS,
-                        ModBlocks.NAUGHT_IRON_SLAB,
-                        ModBlocks.NAUGHT_IRON_FENCE,
-                        ModBlocks.NAUGHT_IRON_FENCE_GATE,
-                        ModBlocks.NAUGHT_IRON_WALL,
-                        ModBlocks.NAUGHT_IRON_DOOR,
-                        ModBlocks.NAUGHT_IRON_TRAPDOOR
+                        ModBlocks.getRK(ModBlocks.NAUGHT_IRON_BLOCK),
+                        ModBlocks.getRK(ModBlocks.NAUGHT_RAW_IRON_BLOCK),
+                        ModBlocks.getRK(ModBlocks.NAUGHT_IRON_ORE),
+                        ModBlocks.getRK(ModBlocks.NAUGHT_DEEPSLATE_IRON_ORE),
+                        ModBlocks.getRK(ModBlocks.NAUGHT_IRON_STAIRS),
+                        ModBlocks.getRK(ModBlocks.NAUGHT_IRON_SLAB),
+                        ModBlocks.getRK(ModBlocks.NAUGHT_IRON_FENCE),
+                        ModBlocks.getRK(ModBlocks.NAUGHT_IRON_FENCE_GATE),
+                        ModBlocks.getRK(ModBlocks.NAUGHT_IRON_WALL),
+                        ModBlocks.getRK(ModBlocks.NAUGHT_IRON_DOOR),
+                        ModBlocks.getRK(ModBlocks.NAUGHT_IRON_TRAPDOOR)
                 ).add(
-                        ModBlocks.NAUGHTSQRD,
-                        ModBlocks.EAT_N_SPIT
+                        ModBlocks.getRK(ModBlocks.NAUGHTSQRD),
+                        ModBlocks.getRK(ModBlocks.EAT_N_SPIT)
                 );
 
-        valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
+        tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(
-                        ModBlocks.NAUGHT_IRON_BLOCK,
-                        ModBlocks.NAUGHT_RAW_IRON_BLOCK,
-                        ModBlocks.NAUGHT_DEEPSLATE_IRON_ORE,
-                        ModBlocks.EAT_N_SPIT
+                        ModBlocks.getRK(ModBlocks.NAUGHT_IRON_BLOCK),
+                        ModBlocks.getRK(ModBlocks.NAUGHT_RAW_IRON_BLOCK),
+                        ModBlocks.getRK(ModBlocks.NAUGHT_DEEPSLATE_IRON_ORE),
+                        ModBlocks.getRK(ModBlocks.EAT_N_SPIT)
                 );
-        valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
+        tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(
-                        ModBlocks.NAUGHT_IRON_ORE
+                        ModBlocks.getRK(ModBlocks.NAUGHT_IRON_ORE)
                 );
 
-        valueLookupBuilder(BlockTags.STAIRS)
+        tag(BlockTags.STAIRS)
                 .add(
-                        ModBlocks.IRON_STAIRS,
-                        ModBlocks.NAUGHT_IRON_STAIRS
+                        ModBlocks.getRK(ModBlocks.IRON_STAIRS),
+                        ModBlocks.getRK(ModBlocks.NAUGHT_IRON_STAIRS)
                 );
-        valueLookupBuilder(BlockTags.SLABS)
+        tag(BlockTags.SLABS)
                 .add(
-                        ModBlocks.IRON_SLAB)
-                .add(ModBlocks.NAUGHT_IRON_SLAB
+                        ModBlocks.getRK(ModBlocks.IRON_SLAB)
+                )
+                .add(
+                        ModBlocks.getRK(ModBlocks.NAUGHT_IRON_SLAB)
                 );
-        valueLookupBuilder(BlockTags.BUTTONS)
+        tag(BlockTags.BUTTONS)
                 .add(
-                        ModBlocks.NAUGHT_IRON_BUTTON
+                        ModBlocks.getRK(ModBlocks.NAUGHT_IRON_BUTTON)
                 );
-        valueLookupBuilder(BlockTags.PRESSURE_PLATES)
+        tag(BlockTags.PRESSURE_PLATES)
                 .add(
-                        ModBlocks.NAUGHT_IRON_PRESSUREPLATE
+                        ModBlocks.getRK(ModBlocks.NAUGHT_IRON_PRESSUREPLATE)
                 );
-        valueLookupBuilder(BlockTags.DOORS)
+        tag(BlockTags.DOORS)
                 .add(
-                        ModBlocks.NAUGHT_IRON_DOOR
+                        ModBlocks.getRK(ModBlocks.NAUGHT_IRON_DOOR)
                 );
-        valueLookupBuilder(BlockTags.TRAPDOORS)
+        tag(BlockTags.TRAPDOORS)
                 .add(
-                        ModBlocks.NAUGHT_IRON_TRAPDOOR
+                        ModBlocks.getRK(ModBlocks.NAUGHT_IRON_TRAPDOOR)
                 );
         //fences&walls required
-        valueLookupBuilder(BlockTags.FENCES)
+        tag(BlockTags.FENCES)
                 .add(
-                        ModBlocks.IRON_FENCE,
-                        ModBlocks.NAUGHT_IRON_FENCE
+                        ModBlocks.getRK(ModBlocks.IRON_FENCE),
+                        ModBlocks.getRK(ModBlocks.NAUGHT_IRON_FENCE)
                 );
-            valueLookupBuilder(BlockTags.WOODEN_FENCES)
+            tag(BlockTags.WOODEN_FENCES)
                     .add(
-                            ModBlocks.NAUGHT_IRON_FENCE
+                            ModBlocks.getRK(ModBlocks.NAUGHT_IRON_FENCE)
                     );
-        valueLookupBuilder(BlockTags.FENCE_GATES)
+        tag(BlockTags.FENCE_GATES)
                 .add(
-                        ModBlocks.IRON_FENCE_GATE,
-                        ModBlocks.NAUGHT_IRON_FENCE_GATE
+                        ModBlocks.getRK(ModBlocks.IRON_FENCE_GATE),
+                        ModBlocks.getRK(ModBlocks.NAUGHT_IRON_FENCE_GATE)
                 );
-        valueLookupBuilder(BlockTags.WALLS)
+        tag(BlockTags.WALLS)
                 .add(
-                        ModBlocks.IRON_WALL,
-                        ModBlocks.NAUGHT_IRON_WALL
+                        ModBlocks.getRK(ModBlocks.IRON_WALL),
+                        ModBlocks.getRK(ModBlocks.NAUGHT_IRON_WALL)
                 );
 
 
         //custopm tool stuff
-        valueLookupBuilder(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL)
+        tag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL)
                 .add(
-                        ModBlocks.NAUGHTSQRD
+                        ModBlocks.getRK(ModBlocks.NAUGHTSQRD)
                 );
-        valueLookupBuilder(ModTags.Blocks.INCORRECT_FOR_NAUGHT_IRON_TOOL)
+        tag(ModTags.Blocks.INCORRECT_FOR_NAUGHT_IRON_TOOL)
                 .addTag(ModTags.Blocks.NEEDS_JEFF_LIKE_TOOL)
                 .add(
                 );
-        valueLookupBuilder(ModTags.Blocks.NEEDS_JEFF_LIKE_TOOL)
+        tag(ModTags.Blocks.NEEDS_JEFF_LIKE_TOOL)
                 .add(
-                        Blocks.BEDROCK
+                        BlockItemIds.BEDROCK.block()
                 );
-        valueLookupBuilder(ModTags.Blocks.INCORRECT_FOR_JEFF_LIKE_TOOL)
+        tag(ModTags.Blocks.INCORRECT_FOR_JEFF_LIKE_TOOL)
                 .add(
                 );
-        valueLookupBuilder(BlockTags.INCORRECT_FOR_NETHERITE_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL).addTag(ModTags.Blocks.NEEDS_JEFF_LIKE_TOOL);
-        valueLookupBuilder(BlockTags.INCORRECT_FOR_DIAMOND_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL).addTag(ModTags.Blocks.NEEDS_JEFF_LIKE_TOOL);
-        valueLookupBuilder(BlockTags.INCORRECT_FOR_IRON_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL).addTag(ModTags.Blocks.NEEDS_JEFF_LIKE_TOOL);
-        valueLookupBuilder(BlockTags.INCORRECT_FOR_COPPER_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL).addTag(ModTags.Blocks.NEEDS_JEFF_LIKE_TOOL);
-        valueLookupBuilder(BlockTags.INCORRECT_FOR_STONE_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL).addTag(ModTags.Blocks.NEEDS_JEFF_LIKE_TOOL);
-        valueLookupBuilder(BlockTags.INCORRECT_FOR_GOLD_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL).addTag(ModTags.Blocks.NEEDS_JEFF_LIKE_TOOL);
-        valueLookupBuilder(BlockTags.INCORRECT_FOR_WOODEN_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL).addTag(ModTags.Blocks.NEEDS_JEFF_LIKE_TOOL);
+        tag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL).addTag(ModTags.Blocks.NEEDS_JEFF_LIKE_TOOL);
+        tag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL).addTag(ModTags.Blocks.NEEDS_JEFF_LIKE_TOOL);
+        tag(BlockTags.INCORRECT_FOR_IRON_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL).addTag(ModTags.Blocks.NEEDS_JEFF_LIKE_TOOL);
+        tag(BlockTags.INCORRECT_FOR_COPPER_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL).addTag(ModTags.Blocks.NEEDS_JEFF_LIKE_TOOL);
+        tag(BlockTags.INCORRECT_FOR_STONE_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL).addTag(ModTags.Blocks.NEEDS_JEFF_LIKE_TOOL);
+        tag(BlockTags.INCORRECT_FOR_GOLD_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL).addTag(ModTags.Blocks.NEEDS_JEFF_LIKE_TOOL);
+        tag(BlockTags.INCORRECT_FOR_WOODEN_TOOL).addTag(ModTags.Blocks.NEEDS_NAUGHT_IRON_TOOL).addTag(ModTags.Blocks.NEEDS_JEFF_LIKE_TOOL);
 
 
 

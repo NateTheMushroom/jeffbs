@@ -155,7 +155,9 @@ public class ModItems {
 
 
 
-
+    public static ResourceKey<Item> getRK(Item item) {
+        return BuiltInRegistries.ITEM.getResourceKey(item).get();
+    }
 
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {

@@ -3,6 +3,9 @@ package net.mshm.jeffbs.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.references.BlockItemIds;
+import net.minecraft.references.BlockItemIds;
+import net.minecraft.references.ItemIds;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Blocks;
 import net.mshm.jeffbs.item.ModItems;
@@ -18,50 +21,50 @@ public class ModItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider registries) {
-        valueLookupBuilder(ModTags.Items.ERROR_IRON)
-                .add(ModItems.NAUGHT_RAW_IRON)
-                .add(ModItems.NAUGHT_IRON_INGOT);
+        tag(ModTags.Items.ERROR_IRON)
+                .add(ModItems.getRK(ModItems.NAUGHT_RAW_IRON))
+                .add(ModItems.getRK(ModItems.NAUGHT_IRON_INGOT));
 
-        valueLookupBuilder(ItemTags.PICKAXES)
-                .add(ModItems.PICKAXE_TOOL_EXE);
-        valueLookupBuilder(ItemTags.AXES)
-                .add(ModItems.AXE_TOOL_EXE);
-        valueLookupBuilder(ItemTags.HOES)
-                .add(ModItems.HOE_TOOL_EXE);
-        valueLookupBuilder(ItemTags.SHOVELS)
-                .add(ModItems.SHOVEL_TOOL_EXE);
-        valueLookupBuilder(ItemTags.SWORDS)
+        tag(ItemTags.PICKAXES)
+                .add(ModItems.getRK(ModItems.PICKAXE_TOOL_EXE));
+        tag(ItemTags.AXES)
+                .add(ModItems.getRK(ModItems.AXE_TOOL_EXE));
+        tag(ItemTags.HOES)
+                .add(ModItems.getRK(ModItems.HOE_TOOL_EXE));
+        tag(ItemTags.SHOVELS)
+                .add(ModItems.getRK(ModItems.SHOVEL_TOOL_EXE));
+        tag(ItemTags.SWORDS)
                 .add(
-                        ModItems.SWORD_TOOL_EXE,
-                        ModItems.STEFF_OF_JAFF
+                        ModItems.getRK(ModItems.SWORD_TOOL_EXE),
+                        ModItems.getRK(ModItems.STEFF_OF_JAFF)
                 );
-        valueLookupBuilder(ItemTags.SPEARS)
+        tag(ItemTags.SPEARS)
                 .add(
-                        ModItems.SPEAR_TOOL_EXE,
-                        ModItems.STEFF_OF_JAFF
+                        ModItems.getRK(ModItems.SPEAR_TOOL_EXE.asItem()),
+                        ModItems.getRK(ModItems.STEFF_OF_JAFF)
                 );
-        valueLookupBuilder(ItemTags.BOW_ENCHANTABLE)
-                .add(ModItems.CATAPULT);
+        tag(ItemTags.BOW_ENCHANTABLE)
+                .add(ModItems.getRK(ModItems.CATAPULT));
 
-        valueLookupBuilder(ItemTags.LEG_ARMOR)
-                .add(ModItems.JEANS);
+        tag(ItemTags.LEG_ARMOR)
+                .add(ModItems.getRK(ModItems.JEANS));
 
 
-        valueLookupBuilder(ModTags.Items.CATAPULTABLE)
+        tag(ModTags.Items.CATAPULTABLE)
                 .forceAddTag(ItemTags.STONE_TOOL_MATERIALS)
                 .forceAddTag(ItemTags.DIRT)
                 .forceAddTag(ItemTags.SAND)
                 .add(
-                        Blocks.STONE.asItem(),
-                        Blocks.GRANITE.asItem(),
-                        Blocks.ANDESITE.asItem(),
-                        Blocks.DIORITE.asItem(),
-                        Blocks.TUFF.asItem(),
-                        Blocks.SMOOTH_BASALT.asItem(),
-                        Blocks.DEEPSLATE.asItem(),
-                        Blocks.NETHERRACK.asItem(),
-                        Blocks.BASALT.asItem(),
-                        Blocks.TNT.asItem()
+                        BlockItemIds.STONE.item(),
+                        BlockItemIds.GRANITE.item(),
+                        BlockItemIds.ANDESITE.item(),
+                        BlockItemIds.DIORITE.item(),
+                        BlockItemIds.TUFF.item(),
+                        BlockItemIds.SMOOTH_BASALT.item(),
+                        BlockItemIds.DEEPSLATE.item(),
+                        BlockItemIds.NETHERRACK.item(),
+                        BlockItemIds.BASALT.item(),
+                        BlockItemIds.TNT.item()
 
                 );
 

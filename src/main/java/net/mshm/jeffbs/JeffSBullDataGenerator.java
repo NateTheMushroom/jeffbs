@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
 import net.mshm.jeffbs.datagen.*;
+import net.mshm.jeffbs.stat.ModStats;
 
 public class JeffSBullDataGenerator implements DataGeneratorEntrypoint {
 	@Override
