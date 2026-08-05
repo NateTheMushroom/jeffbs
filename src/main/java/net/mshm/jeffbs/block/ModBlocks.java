@@ -13,9 +13,11 @@ import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.mshm.jeffbs.JeffSBull;
 import net.mshm.jeffbs.block.custom.EatNSpitBlock;
 import net.mshm.jeffbs.block.custom.NaughtsqrdBlock;
+import net.mshm.jeffbs.block.custom.SteelCropBlock;
 
 import java.util.function.Function;
 
@@ -173,12 +175,25 @@ public class ModBlocks {
                 properties -> new EatNSpitBlock(properties.strength(0.1f, 404f)
                         .sound(SoundType.GLASS).requiresCorrectToolForDrops()));
 
+    public static final Block STEEL_CROP = registerBlockWithoutBlockItem("steel_crop",
+                properties -> new SteelCropBlock(properties
+                        .noCollision()
+                        .randomTicks()
+                        .instabreak()
+                        .sound(SoundType.SMALL_AMETHYST_BUD)
+                        .pushReaction(PushReaction.DESTROY)
+                ));
+
 
     public static ResourceKey<Block> getRK(Block block) {
         return BuiltInRegistries.BLOCK.getResourceKey(block).get();
     }
 
 
+    private static Block registerBlockWithoutBlockItem(String name, Function<BlockBehaviour.Properties, Block> function) {
+        Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(JeffSBull.MOD_ID, name))));
+        return Registry.register(BuiltInRegistries.BLOCK, Identifier.fromNamespaceAndPath(JeffSBull.MOD_ID, name), toRegister);
+    }
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
         Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(JeffSBull.MOD_ID, name))));
         registerBlockItem(name, toRegister);

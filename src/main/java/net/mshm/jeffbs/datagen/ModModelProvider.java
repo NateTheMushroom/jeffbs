@@ -21,6 +21,7 @@ import net.minecraft.util.random.WeightedList;
 import net.minecraft.world.level.block.Blocks;
 import net.mshm.jeffbs.block.ModBlocks;
 import net.mshm.jeffbs.block.custom.NaughtsqrdBlock;
+import net.mshm.jeffbs.block.custom.SteelCropBlock;
 import net.mshm.jeffbs.data.ModDataComponents;
 import net.mshm.jeffbs.item.ModArmourMaterials;
 import net.mshm.jeffbs.item.ModItems;
@@ -60,6 +61,8 @@ public class ModModelProvider extends FabricModelProvider {
                         new MultiVariant(WeightedList.<Variant>builder().add(new Variant(lampOffIdentifier)).build())
                 )));
 
+        blockModelGenerators.createCropBlock(ModBlocks.STEEL_CROP, SteelCropBlock.AGE, 0, 1, 2, 3, 4);
+
 
 
         blockModelGenerators.family(Blocks.IRON_BLOCK)
@@ -92,6 +95,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.FRIED_EGG, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.COLE, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.FOFERROR, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.STEEL, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.GOOD_STEEL, ModelTemplates.FLAT_ITEM);
 
 
         //itemModelGenerators.generateFlatItem(ModItems.DEBUGGER, ModelTemplates.FLAT_HANDHELD_ITEM);

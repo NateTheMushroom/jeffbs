@@ -35,10 +35,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         ModBlocks.NAUGHT_IRON_ORE,
                         ModBlocks.NAUGHT_DEEPSLATE_IRON_ORE
                 );
+
                 oreSmelting(NAUGHT_IRON_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.NAUGHT_IRON_INGOT,
                         0.404f, 200, "naught iron ingot");
                 oreBlasting(NAUGHT_IRON_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.NAUGHT_IRON_INGOT,
                         0.404f, 100, "naught iron ingot");
+                List<ItemLike> STEEL_SMELTABLES = List.of(
+                        ModItems.STEEL
+                );
+                oreSmelting(STEEL_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.GOOD_STEEL,
+                        0.69f, 200, "steel");
+                oreBlasting(STEEL_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.GOOD_STEEL,
+                        0.69f, 100, "steel");
 
                 nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.NAUGHT_IRON_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NAUGHT_IRON_BLOCK);
                 nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.NAUGHT_RAW_IRON, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NAUGHT_RAW_IRON_BLOCK);

@@ -8,6 +8,7 @@ import net.mshm.jeffbs.block.ModBlocks;
 import net.mshm.jeffbs.creativemodetab.ModCreativeModeTabs;
 import net.mshm.jeffbs.data.ModDataComponents;
 import net.mshm.jeffbs.item.ModItems;
+import net.mshm.jeffbs.registries.ModCompostables;
 import net.mshm.jeffbs.registries.ModFuels;
 import net.mshm.jeffbs.stat.ModStats;
 import org.slf4j.Logger;
@@ -26,6 +27,7 @@ public class JeffSBull implements ModInitializer {
         ModFuels.registerFuels();
         ModDataComponents.registerDataComponents();
         ModStats.registerStats();
+        ModCompostables.registerCompostables();
 
 	}
 

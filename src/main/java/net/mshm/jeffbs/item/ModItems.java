@@ -11,6 +11,7 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.mshm.jeffbs.JeffSBull;
+import net.mshm.jeffbs.block.ModBlocks;
 import net.mshm.jeffbs.food.ModFoods;
 import net.mshm.jeffbs.item.custom.DebuggerItem;
 import net.mshm.jeffbs.tags.ModTags;
@@ -25,12 +26,19 @@ public class ModItems {
     public static final Item NAUGHT_IRON_INGOT = registerItem("naught_iron_ingot", Item::new);
     public static final Item NAUGHT_RAW_IRON = registerItem("naught_raw_iron", Item::new);
     public static final Item FOFERROR = registerItem("404error", Item::new);
+    public static final Item STEEL = registerItem("steel", Item::new);
+    public static final Item GOOD_STEEL = registerItem("good_steel", Item::new);
 
         //custom items
     public static final Item DEBUGGER = registerItem("debugger", properties -> new DebuggerItem(properties.durability(404)));
 
     public static  final Item FRIED_EGG = registerItem("fried_egg", properties -> new Item(properties
             .food(ModFoods.FRIED_EGG, ModFoods.FRIED_EGG_CONSUMABLE).stacksTo(1)));
+
+    public static  final Item STEEL_OFFSPRING = registerItem("steel_offspring",
+            properties -> new BlockItem(ModBlocks.STEEL_CROP, properties
+                    .useItemDescriptionPrefix()
+            ));
 
     public static final Item COLE = registerItem("cole", properties ->  new Item(properties){
         @Override

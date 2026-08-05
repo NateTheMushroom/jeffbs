@@ -103,6 +103,10 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                         ModBlocks.getRK(ModBlocks.IRON_WALL),
                         ModBlocks.getRK(ModBlocks.NAUGHT_IRON_WALL)
                 );
+        tag(BlockTags.CROPS)
+                .add(
+                        ModBlocks.getRK(ModBlocks.STEEL_CROP)
+                );
 
 
         //custopm tool stuff
