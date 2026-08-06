@@ -10,6 +10,7 @@ import net.mshm.jeffbs.data.ModDataComponents;
 import net.mshm.jeffbs.item.ModItems;
 import net.mshm.jeffbs.registries.ModCompostables;
 import net.mshm.jeffbs.registries.ModFuels;
+import net.mshm.jeffbs.sound.ModSounds;
 import net.mshm.jeffbs.stat.ModStats;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,6 +29,7 @@ public class JeffSBull implements ModInitializer {
         ModDataComponents.registerDataComponents();
         ModStats.registerStats();
         ModCompostables.registerCompostables();
+        ModSounds.registerSounds();
 
 	}
 

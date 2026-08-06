@@ -2,7 +2,6 @@ package net.mshm.jeffbs.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -21,6 +20,7 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.mshm.jeffbs.block.ModBlocks;
 import net.mshm.jeffbs.item.ModItems;
+import net.mshm.jeffbs.sound.ModSounds;
 import net.mshm.jeffbs.tags.ModTags;
 
 import java.util.Map;
@@ -48,7 +48,10 @@ public class NaughtsqrdBlock extends Block {
         level.addParticle(ParticleTypes.GLOW, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, 0, 1, 0);
 
         level.playLocalSound(pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5,
-                SoundEvents.GLASS_BREAK, SoundSource.MASTER, 40.4f, 4.04f, false);
+                ModSounds.BUG, SoundSource.MASTER,
+                1f,
+                5f + level.getRandom().nextFloat() * 0.6f,
+                false);
         level.setBlockAndUpdate(pos, state.cycle(CLICKED));
         return InteractionResult.SUCCESS;
     }
