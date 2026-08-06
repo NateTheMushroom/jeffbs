@@ -7,6 +7,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.equipment.ArmorType;
@@ -50,6 +51,21 @@ public class ModItems {
     public static  final Item STEEL_OFFSPRING = registerItem("steel_offspring",
             properties -> new BlockItem(ModBlocks.STEEL_CROP, properties
                     .useItemDescriptionPrefix()
+            ));
+    public static  final Item NETHER_ROOT_SEEDS = registerItem("nether_root_seeds",
+            properties -> new PlaceOnWaterBlockItem(ModBlocks.NETHER_ROOT_CROP, properties
+                    .useItemDescriptionPrefix()
+                    .fireResistant()
+            ));
+    public static  final Item NETHER_ROOT = registerItem("nether_root",
+            properties -> new PlaceOnWaterBlockItem(ModBlocks.NETHER_ROOT, properties
+                    .useItemDescriptionPrefix()
+                    .fireResistant()
+            ));
+    public static  final Item SOUR_DOUGH = registerItem("sour_dough",
+            properties -> new Item(properties
+                    .food(ModFoods.SOUR_DOUGH, ModFoods.SOUR_DOUGH_CONSUMABLE)
+                    .fireResistant()
             ));
 
     public static final Item COLE = registerItem("cole", properties ->  new Item(properties){

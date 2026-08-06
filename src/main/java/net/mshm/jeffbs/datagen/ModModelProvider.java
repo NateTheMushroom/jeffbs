@@ -22,6 +22,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.mshm.jeffbs.block.ModBlocks;
 import net.mshm.jeffbs.block.custom.BananaBushBlock;
 import net.mshm.jeffbs.block.custom.NaughtsqrdBlock;
+import net.mshm.jeffbs.block.custom.NetherRootCropBlock;
 import net.mshm.jeffbs.block.custom.SteelCropBlock;
 import net.mshm.jeffbs.data.ModDataComponents;
 import net.mshm.jeffbs.item.ModArmourMaterials;
@@ -63,6 +64,9 @@ public class ModModelProvider extends FabricModelProvider {
                 )));
 
         blockModelGenerators.createCropBlock(ModBlocks.STEEL_CROP, SteelCropBlock.AGE, 0, 1, 2, 3, 4);
+        blockModelGenerators.createCrossBlock(ModBlocks.NETHER_ROOT_CROP,  BlockModelGenerators.PlantType.NOT_TINTED,
+                NetherRootCropBlock.AGE, 0, 1, 2, 3, 4);
+        blockModelGenerators.createCrossBlock(ModBlocks.NETHER_ROOT, BlockModelGenerators.PlantType.NOT_TINTED);
         blockModelGenerators.createCrossBlock(ModBlocks.BANANA_BUSH, BlockModelGenerators.PlantType.NOT_TINTED,
                 BananaBushBlock.AGE, 0, 1, 2, 3);
 
@@ -100,6 +104,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.FOFERROR, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.STEEL, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.GOOD_STEEL, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.NETHER_ROOT, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.SOUR_DOUGH, ModelTemplates.FLAT_ITEM);
 
 
         //itemModelGenerators.generateFlatItem(ModItems.DEBUGGER, ModelTemplates.FLAT_HANDHELD_ITEM);

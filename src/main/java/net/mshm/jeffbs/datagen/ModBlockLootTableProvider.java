@@ -6,21 +6,19 @@ import net.minecraft.advancements.predicates.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
-import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.mshm.jeffbs.block.ModBlocks;
+import net.mshm.jeffbs.block.custom.BananaBushBlock;
+import net.mshm.jeffbs.block.custom.NetherRootCropBlock;
 import net.mshm.jeffbs.block.custom.SteelCropBlock;
 import net.mshm.jeffbs.item.ModItems;
 
@@ -63,6 +61,10 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         this.add(ModBlocks.STEEL_CROP, this.createCropDrops(ModBlocks.STEEL_CROP, ModItems.STEEL, ModItems.STEEL_OFFSPRING,
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.STEEL_CROP)
                         .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SteelCropBlock.AGE, SteelCropBlock.MAX_AGE))));
+        this.add(ModBlocks.NETHER_ROOT_CROP, this.createCropDrops(ModBlocks.NETHER_ROOT_CROP, ModItems.NETHER_ROOT, ModItems.NETHER_ROOT_SEEDS,
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.NETHER_ROOT_CROP)
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(NetherRootCropBlock.AGE, NetherRootCropBlock.MAX_AGE))));
+        dropSelf(ModBlocks.NETHER_ROOT);
 
         this.add(ModBlocks.BANANA_BUSH, block -> this.applyExplosionDecay(block,
                 LootTable.lootTable().withPool(
@@ -71,7 +73,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
                                         .hasBlockStateProperties(ModBlocks.BANANA_BUSH)
                                                 .setProperties(StatePropertiesPredicate.Builder.properties()
                                                         .hasProperty(
-                                                                SweetBerryBushBlock.AGE, 3)
+                                                                BananaBushBlock.AGE, 3)
                                                 )
                                 )
                                 .add(LootItem.lootTableItem(ModItems.BANANA))
@@ -83,7 +85,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
                                         .hasBlockStateProperties(ModBlocks.BANANA_BUSH)
                                                 .setProperties(StatePropertiesPredicate.Builder.properties()
                                                         .hasProperty(
-                                                                SweetBerryBushBlock.AGE, 2)
+                                                                BananaBushBlock.AGE, 2)
                                                 )
                                 )
                                 .add(LootItem.lootTableItem(ModItems.BANANA))

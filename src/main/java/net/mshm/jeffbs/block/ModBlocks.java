@@ -15,10 +15,7 @@ import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.mshm.jeffbs.JeffSBull;
-import net.mshm.jeffbs.block.custom.BananaBushBlock;
-import net.mshm.jeffbs.block.custom.EatNSpitBlock;
-import net.mshm.jeffbs.block.custom.NaughtsqrdBlock;
-import net.mshm.jeffbs.block.custom.SteelCropBlock;
+import net.mshm.jeffbs.block.custom.*;
 
 import java.util.function.Function;
 
@@ -189,6 +186,20 @@ public class ModBlocks {
                         .noCollision()
                         .randomTicks()
                         .sound(SoundType.SMALL_DRIPLEAF)
+                        .pushReaction(PushReaction.DESTROY)
+                ));
+    public static final Block NETHER_ROOT_CROP = registerBlockWithoutBlockItem("nether_root_crop",
+                properties -> new NetherRootCropBlock(properties
+                        .noCollision()
+                        .randomTicks()
+                        .sound(SoundType.TWISTING_VINES)
+                        .pushReaction(PushReaction.DESTROY)
+                ));
+    public static final Block NETHER_ROOT = registerBlockWithoutBlockItem("nether_root",
+                properties -> new Block(properties
+                        .noCollision()
+                        .randomTicks()
+                        .sound(SoundType.TWISTING_VINES)
                         .pushReaction(PushReaction.DESTROY)
                 ));
 

@@ -156,7 +156,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .group("naught_iron")
                         .save(output);
 
-
                 shaped(RecipeCategory.TOOLS, ModItems.JEANS)
                         .pattern("XNX")
                         .pattern("W W")
@@ -166,6 +165,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('W', ItemTags.WOOL)
                         .unlockedBy(getHasName(ModItems.NAUGHT_IRON_INGOT), has(ModItems.NAUGHT_IRON_INGOT))
                         .group("jeans")
+                        .save(output);
+
+                shaped(RecipeCategory.FOOD, ModItems.SOUR_DOUGH)
+                        .pattern("XX")
+                        .define('X', ModItems.NETHER_ROOT)
+                        .unlockedBy(getHasName(ModItems.NETHER_ROOT), has(ModItems.NETHER_ROOT))
+                        .group("sour_dough")
                         .save(output);
 
 

@@ -27,6 +27,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.STEEL);
                         output.accept(ModItems.GOOD_STEEL);
                         output.accept(ModItems.BANANA);
+                        output.accept(ModItems.NETHER_ROOT_SEEDS);
+                        output.accept(ModItems.NETHER_ROOT);
+                        output.accept(ModItems.SOUR_DOUGH);
 
                         output.accept(ModItems.PICKAXE_TOOL_EXE);
                         output.accept(ModItems.AXE_TOOL_EXE);
