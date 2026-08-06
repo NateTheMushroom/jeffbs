@@ -15,6 +15,7 @@ import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.mshm.jeffbs.JeffSBull;
+import net.mshm.jeffbs.block.custom.BananaBushBlock;
 import net.mshm.jeffbs.block.custom.EatNSpitBlock;
 import net.mshm.jeffbs.block.custom.NaughtsqrdBlock;
 import net.mshm.jeffbs.block.custom.SteelCropBlock;
@@ -181,6 +182,13 @@ public class ModBlocks {
                         .randomTicks()
                         .instabreak()
                         .sound(SoundType.SMALL_AMETHYST_BUD)
+                        .pushReaction(PushReaction.DESTROY)
+                ));
+    public static final Block BANANA_BUSH = registerBlockWithoutBlockItem("banana_bush",
+                properties -> new BananaBushBlock(properties
+                        .noCollision()
+                        .randomTicks()
+                        .sound(SoundType.SMALL_DRIPLEAF)
                         .pushReaction(PushReaction.DESTROY)
                 ));
 

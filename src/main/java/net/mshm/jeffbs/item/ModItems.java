@@ -10,6 +10,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.equipment.ArmorType;
+import net.minecraft.world.level.block.Blocks;
 import net.mshm.jeffbs.JeffSBull;
 import net.mshm.jeffbs.block.ModBlocks;
 import net.mshm.jeffbs.food.ModFoods;
@@ -34,6 +35,17 @@ public class ModItems {
 
     public static  final Item FRIED_EGG = registerItem("fried_egg", properties -> new Item(properties
             .food(ModFoods.FRIED_EGG, ModFoods.FRIED_EGG_CONSUMABLE).stacksTo(1)));
+    public static  final Item BANANA = registerItem("banana",
+            properties -> new BlockItem(ModBlocks.BANANA_BUSH, properties
+                    .useItemDescriptionPrefix()
+                    .food(ModFoods.BANANA)
+            ) {
+        @Override
+        public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+            builder.accept(Component.translatable("tooltip.jeffbs.banana"));
+            super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+        }
+    });
 
     public static  final Item STEEL_OFFSPRING = registerItem("steel_offspring",
             properties -> new BlockItem(ModBlocks.STEEL_CROP, properties

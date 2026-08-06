@@ -9,6 +9,8 @@
   "block.jeffbs.steel_crop": "Steel Crop",
   "item.jeffbs.steel": "Steel",
   "item.jeffbs.good_steel": "Good Steel",
+  "item.jeffbs.banana": "Banana",
+  "block.jeffbs.banana_bush": "Banana Bush",
 
   "item.jeffbs.pickaxe_tool_exe": "Pickaxe.exe",
   "item.jeffbs.axe_tool_exe": "Axe.exe",
@@ -59,5 +61,6 @@
   "tooltip.jeffbs.debugger.a": "§l§nConverts§r §4§kBugged§r§l §nIron Blocks to Iron Blocks",
   "tooltip.jeffbs.debugger.shift_down": "§oDebugged @ coords: ",
   "tooltip.jeffbs.debugger.shift_up": "§oPress §e§o§lShift§r§o for coords",
-  "tooltip.jeffbs.debugger.b": "§oClick a §4§o§kbugged§r§o block to save coords"
+  "tooltip.jeffbs.debugger.b": "§oClick a §4§o§kbugged§r§o block to save coords",
+  "tooltip.jeffbs.banana": "Bananas are Berries. Berries grow on bushes. This makes sense."
 }

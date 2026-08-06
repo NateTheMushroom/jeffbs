@@ -10,6 +10,9 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SweetBerryBushBlock;
+import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
@@ -32,6 +35,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
 
     @Override
     public void generate() {
+        var enchantments = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
 
         dropSelf(ModBlocks.IRON_STAIRS);
         dropSelf(ModBlocks.IRON_FENCE);
@@ -59,6 +63,34 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         this.add(ModBlocks.STEEL_CROP, this.createCropDrops(ModBlocks.STEEL_CROP, ModItems.STEEL, ModItems.STEEL_OFFSPRING,
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.STEEL_CROP)
                         .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SteelCropBlock.AGE, SteelCropBlock.MAX_AGE))));
+
+        this.add(ModBlocks.BANANA_BUSH, block -> this.applyExplosionDecay(block,
+                LootTable.lootTable().withPool(
+                        LootPool.lootPool()
+                                .when(LootItemBlockStatePropertyCondition
+                                        .hasBlockStateProperties(ModBlocks.BANANA_BUSH)
+                                                .setProperties(StatePropertiesPredicate.Builder.properties()
+                                                        .hasProperty(
+                                                                SweetBerryBushBlock.AGE, 3)
+                                                )
+                                )
+                                .add(LootItem.lootTableItem(ModItems.BANANA))
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 3.0F)))
+                                .apply(ApplyBonusCount.addUniformBonusCount(enchantments.getOrThrow(Enchantments.FORTUNE)))
+                ).withPool(
+                        LootPool.lootPool()
+                                .when(LootItemBlockStatePropertyCondition
+                                        .hasBlockStateProperties(ModBlocks.BANANA_BUSH)
+                                                .setProperties(StatePropertiesPredicate.Builder.properties()
+                                                        .hasProperty(
+                                                                SweetBerryBushBlock.AGE, 2)
+                                                )
+                                )
+                                .add(LootItem.lootTableItem(ModItems.BANANA))
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F)))
+                                .apply(ApplyBonusCount.addUniformBonusCount(enchantments.getOrThrow(Enchantments.FORTUNE)))
+                )
+        ));
 
     }
 

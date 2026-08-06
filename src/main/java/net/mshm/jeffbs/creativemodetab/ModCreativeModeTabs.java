@@ -26,6 +26,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.STEEL_OFFSPRING);
                         output.accept(ModItems.STEEL);
                         output.accept(ModItems.GOOD_STEEL);
+                        output.accept(ModItems.BANANA);
 
                         output.accept(ModItems.PICKAXE_TOOL_EXE);
                         output.accept(ModItems.AXE_TOOL_EXE);

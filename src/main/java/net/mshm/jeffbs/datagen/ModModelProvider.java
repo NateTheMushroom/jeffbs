@@ -20,6 +20,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.util.random.WeightedList;
 import net.minecraft.world.level.block.Blocks;
 import net.mshm.jeffbs.block.ModBlocks;
+import net.mshm.jeffbs.block.custom.BananaBushBlock;
 import net.mshm.jeffbs.block.custom.NaughtsqrdBlock;
 import net.mshm.jeffbs.block.custom.SteelCropBlock;
 import net.mshm.jeffbs.data.ModDataComponents;
@@ -62,6 +63,8 @@ public class ModModelProvider extends FabricModelProvider {
                 )));
 
         blockModelGenerators.createCropBlock(ModBlocks.STEEL_CROP, SteelCropBlock.AGE, 0, 1, 2, 3, 4);
+        blockModelGenerators.createCrossBlock(ModBlocks.BANANA_BUSH, BlockModelGenerators.PlantType.NOT_TINTED,
+                BananaBushBlock.AGE, 0, 1, 2, 3);
 
 
 
